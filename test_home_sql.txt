@@ -1,0 +1,38 @@
+จงออกแบบฐำนข้อมูล MYSQL นักศึกษำ โดยระบุ ชื่อตำรำง ชื่อฟิ ลด์ และชนิดของข้อมูลในแต่ละฟิ ลด์ เพื่อเก็บข้อมูล
+ดงตอไปน: รหัสนักศึกษำ ชื่อ นำมสกุล เพศ วันเดือนปี เกิด ที่อยู่ เบอร์โทรศัพท์
+และเก็บรำยละเอียดผลกำรเรียนของแต่ละวิชำ แต่ละภำคกำรศึกษำ โดยมีข้อมูล: รหัสวิชำ ชื่อวิชำ หน่วยกิต
+โดยฐำนข้อมูลจะต้องสำมำรถ คนหำขอมลดงตอไปนได ◦ เกรดเฉลี่ยของนักศึกษำในแต่ละภำคกำรศึกษำ
+◦ เกรดเฉลี่ยของวิชำในแต่ละภำคกำรศึกษำ
+◦ เกรดเฉลี่ยของนักศึกษำรวมทุกปี กำรศึกษำ
+ส่งมาเป็ นไฟล์ SQL โดยไม่ต้องลงมือเขียนโปรแกรมจริง
+
+Design the MYSQL Student Data Base by specifying the field name, field name and data type in each field to collect the data.
+Dong Toon: Student ID, name, surname, gender, date of birth, address, telephone number
+
+
+
+And keeping a detailed record of each academic grade Each language study consists of information: code, name, course, credit
+
+
+The database must be able to People can ask for further assistance.
+
+
+Grade point average for students in each language
+Grade point average for each language
+GPA of all students every year
+
+
+Delivered as an SQL file without having to actually write the program.
+
+
+solutions:
+	Grade point average for students in each language
+	
+	SELECT  SUM(points)/SUM(student_id) as GPASTUDENTS FROM academic WHERE code='tt 001';
+	
+	Grade point average for each language
+	
+	SELECT  AVG(points)  as GPA FROM academic WHERE code='tt 001';
+	
+	GPA of all students every year
+	SELECT  AVG(points)  as GPA FROM academic WHERE year=2000;
